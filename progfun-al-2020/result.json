@@ -1,0 +1,39 @@
+{
+  "limite" : {
+    "x" : 6,
+    "y" : 6
+  },
+  "tondeuses" : [ {
+    "debut" : {
+      "point" : {
+        "x" : 1,
+        "y" : 3
+      },
+      "direction" : "N"
+    },
+    "instructions" : [ "G", "A", "G", "A", "G", "A", "G", "A", "A" ],
+    "fin" : {
+      "point" : {
+        "x" : 1,
+        "y" : 4
+      },
+      "direction" : "N"
+    }
+  }, {
+    "debut" : {
+      "point" : {
+        "x" : 3,
+        "y" : 2
+      },
+      "direction" : "E"
+    },
+    "instructions" : [ "A", "A", "D", "A", "A", "D", "A", "D", "D", "A" ],
+    "fin" : {
+      "point" : {
+        "x" : 5,
+        "y" : 0
+      },
+      "direction" : "E"
+    }
+  } ]
+}
