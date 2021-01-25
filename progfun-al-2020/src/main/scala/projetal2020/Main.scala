@@ -68,9 +68,9 @@ object Programme {
 
   def position(tondeuses: List[String]): List[Tondeuse] = {
     val t = List[Tondeuse]()
+    println(tondeuses)
     positionOne(t, tondeuses)
   }
-
   def positionOne(result: List[Tondeuse], input: List[String]): List[Tondeuse] =
     (input.headOption, input.drop(1).headOption) match {
       case (Some(first), Some(second)) => {
@@ -83,7 +83,7 @@ object Programme {
       }
       case _ => result
     }
-  
+
   def moove(tondeuse: Tondeuse, grid: Grid): Coordonne = {
     mooveCoordonne(
       new Coordonne(tondeuse.x, tondeuse.y, tondeuse.o),
@@ -103,7 +103,6 @@ object Programme {
       case value :: rest => mooveCoordonne(newOrientation(c, value), rest, grid)
       case _             => c
     }
-
   def newOrientation(c: Coordonne, instruction: String): Coordonne =
     (c, instruction) match {
       case _ if instruction == "G" && c.orientation == "N" =>
